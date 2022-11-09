@@ -1265,31 +1265,31 @@ Banner Style
 }
 
 .slider-item.banner-bg-1 {
-  background-image: url(../images/banner/banner-img1.jpg);
+  background-image: url(../images/banner/slider_1.jpg);
 }
 
 .slider-item.banner-bg-2 {
-  background-image: url(../images/banner/banner-img2.jpg);
+  background-image: url(../images/banner/slider_2.jpg);
 }
 
 .slider-item.banner-bg-3 {
-  background-image: url(../images/banner/banner-img3.jpg);
+  background-image: url(../images/banner/slider_3.jpg);
 }
 
 .slider-item.banner-bg-4 {
-  background-image: url(../images/banner/banner-img4.jpg);
+  background-image: url(../images/banner/slider_4.jpg);
 }
 
 .slider-item.banner-bg-5 {
-  background-image: url(../images/banner/banner-img5.jpg);
+  background-image: url(../images/banner/slider_5.jpg);
 }
 
 .slider-item.banner-bg-6 {
-  background-image: url(../images/banner/banner-img6.jpg);
+  background-image: url(../images/banner/slider_6.jpg);
 }
 
 .slider-item.banner-bg-7 {
-  background-image: url(../images/banner/banner-img7.jpg);
+  background-image: url(../images/banner/slider_7.jpg);
 }
 
 .slider-item.banner-bg-8 {
@@ -1415,7 +1415,8 @@ Banner Style
   position: absolute;
   bottom: 30px;
   left: 30px;
-  bottom: -130px;
+  /* bottom: -130px; */
+  bottom: -70px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background-color: transparent;
