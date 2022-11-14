@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Bootstrap Css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--Meanmenu.css-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--Owl carousel-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <!--Owl Theme-->
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <!--Magnific-popup-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--Flaticon-->
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <!--Remixicon-->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <!--Odometer-->
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <!--Aos css-->
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <!--Style css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!--Dark css-->
+        <link rel="stylesheet" href="assets/css/dark.css">
+        <!--Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        <title>Sanu - College University HTML Template</title>
+
+        <style>
+            .page-banner-area {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .form{
+                /* height: auto; */
+                /* width: 400px; */
+                padding: 0px 0px 0px 0px;
+                /* border: 2px solid rgb(0, 255, 170); */
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                align-items: center;
+                position: relative;
+                /* background-color: rgb(1, 0, 22); */
+            }
+
+            .buttons{
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 31px;
+                float: left;
+                /* padding-bottom: 20px; */
+            }
+            
+            .buttons .login-btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                width: 50%;
+                cursor: pointer;
+            }
+
+            #chbox:checked ~ .login-form-two{
+                display: flex;
+            }
+
+            #chbox:checked ~ .login-form-one{
+                display: none;
+            }
+
+            #chbox:checked + .layer{
+                left: 50%;
+            }
+
+            #chbox:checked ~ .layer2{
+                left: 50%;
+            }
+            
+            #chbox{
+                display: none;
+            }
+
+            .layer{
+                content: '';
+                height: 30px;
+                width: 50%;
+                background-color: transparent;
+                float: right;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+
+            .layer2{
+                content: '';
+                height: 30px;
+                width: 50%;
+                z-index: 0;
+                background-color: rgb(0 0 0 / 54%);
+                float: right;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+
+            /* login form */
+            .form .login-form-one{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            /* .form .login-form-one input{
+                border: none;
+                border-bottom: 1px solid black;
+                outline: none;
+                padding: 5px;
+            } */
+
+            hr{
+                height: 5px;
+                background-color: black;
+                width: 320px;
+                margin: 15px -20px 5px -20px;
+            }
+
+            .tag{
+                text-align: center;
+                font-size: 20px;
+                margin: 7px 0px 7px 0px;
+
+                /* margin: auto; */
+            }
+            /* .icons{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } */
+
+            /* .fa {
+                padding: 20px;
+                border-radius: 100%;
+                font-size: 20px;
+                text-align: center;
+                text-decoration: none;
+                margin: 2px 2px;
+            }
+            
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+            }
+            
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+                font-size: 10px;
+
+            }
+            
+            .fa-google {
+                background: #dd4b39;
+                color: white;
+            }
+            
+            .fa-linkedin {
+                background: #007bb5;
+                color: white;
+            } */
+
+            .submit{
+                width: 70px;
+                border: none;
+                padding: 7px;
+                border-radius: 5px;
+                background-color: cadetblue;
+                outline: none;
+                cursor: pointer;
+            }
+            /* Login form end */
+
+
+	        /* Sign Up form form */
+            .form .login-form-two{
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            /* .form .login-form-two input{
+                border: none;
+                border-bottom: 1px solid black;
+                outline: none;
+                padding: 5px;
+                margin: 0px;
+            } */
+        </style>
+    </head>
+    <body>
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Navbar Area --> 
+        <div class="navbar-area nav-bg-1">
+            <div class="mobile-responsive-nav">
+                <div class="container">
+                    <div class="mobile-responsive-menu">
+                        <div class="logo">
+                            <a href="index.html">
+                                <!-- <img src="assets/images/logo.png" class="main-logo" lt="logo">
+                                    <img src="assets/images/white-logo.png" class="white-logo" alt="logo"> -->
+                                <img src="assets/images/ewu_white_logo.png" class="main-logo" lt="logo">
+                                <img src="assets/images/ewu_blue_logo.png" class="white-logo" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="desktop-nav">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="index.html">
+                            <!-- <img src="assets/images/white-logo.png" alt="logo"> -->
+                            <img src="assets/images/ewu_white_logo.png" alt="logo">
+                        </a>
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle active">
+                                        Home
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="index.html" class="nav-link active">Home One</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="index-2.html" class="nav-link">Home Two</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="index-3.html" class="nav-link">Home Three</a>
+                                        </li>
+                                    </ul>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">
+                                        Pages
+                                    </a>
+        
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="graduate-admission.html" class="nav-link">Graduate Admission</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="campus-life.html" class="nav-link">Campus Life</a>
+                                        </li>
+        
+        
+        
+                                        <li class="nav-item">
+                                            <a href="alumni.html" class="nav-link">Alumni</a>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link dropdown-toggle">
+                                                Academics
+                                            </a>
+        
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a href="academics.html" class="nav-link">Academics</a>
+                                                </li>
+        
+                                                <li class="nav-item">
+                                                    <a href="academics-details.html" class="nav-link">Academics Details</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link dropdown-toggle">
+                                                Latest News
+                                            </a>
+        
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a href="latest-news.html" class="nav-link">Our Latest News</a>
+                                                </li>
+        
+                                                <li class="nav-item">
+                                                    <a href="news-details.html" class="nav-link">News Details</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="faq.html" class="nav-link">FAQ</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link dropdown-toggle">
+                                                Users
+                                            </a>
+        
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a href="login.html" class="nav-link">Login</a>
+                                                </li>
+        
+                                                <li class="nav-item">
+                                                    <a href="register.html" class="nav-link">Register</a>
+                                                </li>
+        
+                                                <li class="nav-item">
+                                                    <a href="recover-password.html" class="nav-link">Recover Password</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="terms-conditions.html" class="nav-link">Terms And Conditions</a>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="coming-soon.html" class="nav-link">Coming Soon</a>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="404.html" class="nav-link">404 Page</a>
+                                        </li>
+                                    </ul>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">
+                                        Courses
+                                    </a>
+        
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="courses.html" class="nav-link">Courses</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="courses-details.html" class="nav-link">Courses Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">
+                                        Health Care
+                                    </a>
+        
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="health-care.html" class="nav-link">Health Care</a>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="health-care-details.html" class="nav-link">Health Care Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">
+                                        Events
+                                    </a>
+        
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="events.html" class="nav-link">Events</a>
+                                        </li>
+        
+                                        <li class="nav-item">
+                                            <a href="events-details.html" class="nav-link">Events Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a href="contact-us.html" class="nav-link">Contact Us</a>
+                                </li>
+                            </ul>
+        
+                            <div class="others-options">
+                                <div class="icon">
+                                    <i class="ri-menu-3-fill" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        
+            <div class="others-option-for-responsive">
+                <div class="container">
+                    <div class="dot-menu">
+                        <div class="inner">
+                            <div class="icon">
+                                <i class="ri-menu-3-fill" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+
+
+
+
+
+        <!--Start Page Banner-->
+        <div class="page-banner-area" style="background-image: url(assets/images/page-banner/all-categories-photo.jpg);">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h1 class="text-uppercase">Log in your account</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae adipisci incidunt laudantium sed aut assumenda amet cum, magni ducimus ipsa dicta omnis cumque libero, quod aspernatur quae ipsum facere commodi!</P>
+                </div>
+            </div>
+        </div>
+        <!--End Page Banner-->
+
+        <div class="news-details-area ptb-50">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 form">
+                        <div class="buttons bg-f4f6f9">
+                            <label for="chbox" class="loginCheck login-btn"><span>Job Portal</span></label>
+                            <label for="chbox" class="loginCheck login-btn"><span>Employes</span></label>
+                        </div>
+                        <input type="checkbox" id="chbox">
+                        <div class="layer"></div>
+                        <div class="layer2"></div>
+
+                        <div class="login-form-one bg-f4f6f9 p-3 mt-3">
+                            <div class="form-group mb-3">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-sm bg-1E446F text-light rounded-4" style="border: none;">Login</button>
+                            </div>
+                            <!-- <hr>
+                            <span class="tag">or Login using</span>
+                            <div class="icons">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-google"></a>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </div> -->
+                        </div>
+                    
+                        <div class="login-form-two bg-f4f6f9 p-3 mt-3">
+                            <div class="form-group mb-3">
+                                <label for="exampleInputEmail1">Username</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            
+                            <div class="form-group mb-3">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-sm bg-1E446F text-light rounded-4"
+                                    style="border: none;">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!--Start Copyright Area-->
+        <div class="copyright-area">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-4">
+                            <div class="social-content">
+                                <ul>
+                                    <li><span>Follow Us On</span></li>
+                                    <li>
+                                        <a href="https://www.facebook.com" target="_blank"><i class="ri-facebook-fill"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.twitter.com" target="_blank"><i class="ri-twitter-fill"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://instagram.com/?lang=en" target="_blank"><i class="ri-instagram-line"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://linkedin.com/?lang=en" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-8">
+                            <div class="copy">
+                                <p>© Sanu is Proudly Owned by <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Copyright Area-->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class="ri-arrow-up-s-line"></i>
+            <i class="ri-arrow-up-s-line"></i>
+        </div>
+        <!-- End Go Top Area -->
+        
+        <!-- Jquery js -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- Bootstrap bundle js -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- Meanmenu js -->
+        <script src="assets/js/jquery.meanmenu.js"></script>
+        <!-- Owl Carosel js -->
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <!-- Owl Carosel Thumbs js -->
+        <script src="assets/js/carousel-thumbs.min.js"></script>
+        <!-- Magnific popup js -->
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <!-- Aos js -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Odometer js -->    
+        <script src="assets/js/odometer.min.js"></script>
+        <!-- Appear js -->  
+        <script src="assets/js/appear.min.js"></script> 
+        <!-- Form Validator js -->    
+        <script src="assets/js/form-validator.min.js"></script>
+        <!-- Contact Form Script js -->    
+        <script src="assets/js/contact-form-script.js"></script>
+        <!-- Ajaxchimp js -->    
+        <script src="assets/js/ajaxchimp.min.js"></script>
+        <!--Custom js-->
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>
